@@ -32,7 +32,7 @@ cd $2
 
 for x in $($DUMPIFS ../$1 | grep -v ^[a-zA-Z]| awk '{print($3)}'|sort -u |xargs -n 1 basename)
 do
-$DUMPIFS -x ../$1 $x
+$DUMPIFS $DIRNAME/$1 -x  $x
 done
 cd ..
 
